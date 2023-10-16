@@ -37,31 +37,29 @@ class _HomePageState extends State<HomePage> {
         );
       },
     );
-    return SafeArea(
-      child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          backgroundColor: Colors.white,
-          body: PageView(
-            controller: _pageController,
-            children: _pages,
-            physics: const NeverScrollableScrollPhysics(),
-            onPageChanged: (index) {
-              setState(() {
-                _currentPage = index;
-              });
-            },
-          ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked,
-          floatingActionButton: FloatingActionButton(
-              onPressed: () {},
-              backgroundColor: const Color.fromARGB(255, 255, 33, 17),
-              child:  Icon(
-                Icons.add,
-                size: 35.h,
-              )),
-          bottomNavigationBar: navbar),
-    );
+    return Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Colors.white,
+        body: PageView(
+          controller: _pageController,
+          children: _pages,
+          physics: const NeverScrollableScrollPhysics(),
+          onPageChanged: (index) {
+            setState(() {
+              _currentPage = index;
+            });
+          },
+        ),
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: const Color.fromARGB(255, 255, 33, 17),
+            child:  Icon(
+              Icons.add,
+              size: 35.h,
+            )),
+        bottomNavigationBar: navbar);
   }
 }
 
