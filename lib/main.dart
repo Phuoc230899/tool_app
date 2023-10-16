@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
                 primaryColor: Colors.white,
                 colorScheme: ColorScheme.fromSeed(
                     seedColor: const Color.fromARGB(255, 255, 33, 17))),
+                
             home: const HomePage(),
           );
         });
